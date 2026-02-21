@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Style Ads | Custom Designs That Grow Your Business</title>
+  <meta name="description" content="Custom Style Ads offers brand identity, marketing graphics, and monthly social media marketing packages designed to convert." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b1220;
+      --muted:#5a6476;
+      --border:#e7eaf0;
+      --soft:#f6f8fb;
+      --gold:#d4af37;
+      --gold2:#f0d77a;
+      --shadow: 0 18px 60px rgba(15, 23, 42, 0.12);
+      --shadow2: 0 10px 30px rgba(15, 23, 42, 0.10);
+      --radius: 20px;
+      --radius2: 28px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a{ color: inherit; text-decoration: none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header{
+      position: sticky; top:0; z-index: 50;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 240px;
+    }
+
+    /* Inline “logo” badge (since you don't want external files).
+       Replace this SVG with your real logo later if you want. */
+    .logoBadge{
+      width: 44px; height: 44px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(212,175,55,.22), rgba(240,215,122,.10));
+      border: 1px solid rgba(212,175,55,.35);
+      box-shadow: 0 10px 26px rgba(212,175,55,.18);
+      flex: 0 0 auto;
+    }
+    .logoBadge svg{ width: 30px; height: 30px; }
+    .brandText b{ display:block; font-size: 14px; letter-spacing: .2px; }
+    .brandText span{ display:block; font-size: 12px; color: var(--muted); font-weight: 650; margin-top: 2px; }
+
+    .navlinks{
+      display:flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end;
+    }
+    .navlinks a{
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 750;
+      padding: 9px 12px;
+      border-radius: 999px;
+      transition: background .18s ease, color .18s ease;
+    }
+    .navlinks a:hover{ background: var(--soft); color: var(--text); }
+
+    .navCTA{
+      display:flex; gap:10px; align-items:center;
+    }
+
+    /* Buttons */
+    .btn{
+      appearance:none; border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 850;
+      font-size: 13px;
+      cursor:pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow2); }
+    .btnPrimary{
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      border-color: rgba(212,175,55,.55);
+      color: #1a1400;
+    }
+    .btnGhost{
+      background: rgba(255,255,255,0.8);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 72px 0 42px;
+      background:
+        radial-gradient(1100px 520px at 10% 10%, rgba(212,175,55,.16), transparent 55%),
+        radial-gradient(900px 480px at 95% 5%, rgba(15,23,42,.10), transparent 52%);
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 920px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .nav{ flex-wrap: wrap; }
+      .navCTA{ width: 100%; justify-content: flex-start; }
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 13px;
+      color:#6a5200;
+      background: rgba(212,175,55,.14);
+      border: 1px solid rgba(212,175,55,.28);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: 52px;
+      line-height: 1.03;
+      letter-spacing: -1px;
+    }
+    @media (max-width: 520px){ h1{ font-size: 42px; } }
+    .sub{
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 18px;
+      font-weight: 650;
+      max-width: 64ch;
+    }
+    .offer{
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(212,175,55,.32);
+      background: rgba(212,175,55,.10);
+      color: #5f4a00;
+      font-weight: 850;
+    }
+    .heroActions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 16px;
+    }
+
+    .panel{
+      background:#fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position: relative;
+    }
+    .panel:before{
+      content:"";
+      position:absolute;
+      width: 260px; height: 260px;
+      right:-120px; top:-120px;
+      background: radial-gradient(circle at 30% 30%, rgba(212,175,55,.26), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .panel h3{
+      margin: 0 0 12px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    .miniGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 520px){ .miniGrid{ grid-template-columns: 1fr; } }
+    .mini{
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 12px;
+      background: rgba(246,248,251,.7);
+    }
+    .mini b{ display:block; font-size: 14px; }
+    .mini span{ display:block; margin-top:6px; color: var(--muted); font-size: 12px; font-weight: 650; }
+
+    /* Sections */
+    section{ padding: 74px 0; }
+    .sectionHead{
+      text-align:center;
+      margin-bottom: 26px;
+    }
+    .sectionHead h2{
+      margin: 0 0 10px;
+      font-size: 32px;
+      letter-spacing: -.4px;
+    }
+    .sectionHead p{
+      margin: 0 auto;
+      max-width: 72ch;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .softBlock{
+      background: var(--soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Cards */
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 920px){ .grid3{ grid-template-columns: 1fr; } }
+    .infoCard{
+      background:#fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 12px 32px rgba(15,23,42,.06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .infoCard:hover{ transform: translateY(-6px); box-shadow: var(--shadow2); }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size: 12px;
+      font-weight: 950;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(212,175,55,.12);
+      border: 1px solid rgba(212,175,55,.28);
+      color:#5f4a00;
+      margin-bottom: 10px;
+    }
+    .infoCard h3{ margin: 6px 0 6px; font-size: 18px; }
+    .infoCard p{ margin: 0; color: var(--muted); font-weight: 650; }
+
+    /* Pricing — Option 2 (bold price under title) */
+    .pricingGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+    @media (max-width: 980px){ .pricingGrid{ grid-template-columns: 1fr; } }
+
+    .priceCard{
+      background:#fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px 22px;
+      box-shadow: var(--shadow2);
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .priceCard:hover{ transform: translateY(-10px); box-shadow: var(--shadow); }
+
+    .priceCard h3{
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -.2px;
+    }
+    .price{
+      font-size: 40px;
+      font-weight: 950;
+      letter-spacing: -1px;
+      margin: 0 0 16px;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .price small{
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 850;
+      margin-left: 6px;
+      letter-spacing: 0;
+    }
+
+    .features{
+      list-style:none;
+      padding:0; margin: 0;
+      display:grid;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .features li{
+      display:flex; gap:10px; align-items:flex-start;
+      color: #263044;
+      font-weight: 700;
+    }
+    .tick{
+      width: 22px; height: 22px; min-width:22px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      background: rgba(212,175,55,.14);
+      border: 1px solid rgba(212,175,55,.34);
+      color:#5f4a00;
+      font-weight: 950;
+      margin-top: 1px;
+      line-height: 1;
+    }
+    .cardCTA{
+      margin-top: 18px;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .cardCTA .btn{ width: 100%; justify-content:center; }
+
+    .featured{
+      border-color: rgba(212,175,55,.65);
+      box-shadow: 0 20px 70px rgba(212,175,55,.22);
+    }
+    .ribbon{
+      position:absolute;
+      top: 14px; right: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 950;
+      color:#1a1400;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      border: 1px solid rgba(212,175,55,.55);
+    }
+
+    /* Contact */
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: start;
+      margin-top: 18px;
+    }
+    @media (max-width: 920px){ .contactGrid{ grid-template-columns: 1fr; } }
+
+    .contactCard{
+      background:#fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow2);
+    }
+    label{ display:block; margin: 10px 0 6px; font-size: 12px; color: var(--muted); font-weight: 900; letter-spacing:.02em; }
+    input, textarea{
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 12px;
+      font-size: 14px;
+      outline: none;
+      background:#fff;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    input:focus, textarea:focus{
+      border-color: rgba(212,175,55,.7);
+      box-shadow: 0 0 0 4px rgba(212,175,55,.16);
+    }
+    .note{ color: var(--muted); font-weight: 650; font-size: 13px; margin-top: 10px; }
+
+    footer{
+      padding: 34px 0 44px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 700;
+      background:#fff;
+    }
+
+    /* Reveal animations */
+    .reveal{
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .75s ease, transform .75s ease;
+    }
+    .reveal.show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Custom Style Ads Home">
+          <div class="logoBadge" aria-hidden="true">
+            <!-- Minimal inline mark (replace later if desired) -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6.2 14.6c1.2 2.8 3.7 4.7 6.9 4.7 3.8 0 6.9-2.7 6.9-6.1 0-3.4-3.1-6.1-6.9-6.1-2.9 0-5.4 1.5-6.6 3.7" stroke="rgba(15,23,42,.9)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M4.2 12h6.7" stroke="rgba(15,23,42,.9)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M4.2 12l2.2-2.2M4.2 12l2.2 2.2" stroke="rgba(15,23,42,.9)" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="brandText">
+            <b>Custom Style Ads</b>
+            <span>Custom Designs That Grow Your Business</span>
+          </div>
+        </a>
+
+        <nav class="navlinks" aria-label="Site navigation">
+          <a href="#services">Services</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="navCTA">
+          <a class="btn btnGhost" href="mailto:CustomStyleAds@gmail.com?subject=Booking%20Request%20%E2%80%94%20Custom%20Style%20Ads">Book</a>
+          <a class="btn btnPrimary" href="#contact">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="hero">
+    <div class="wrap">
+      <div class="heroGrid reveal">
+        <div>
+          <div class="kicker">✨ Premium design + marketing built to convert</div>
+          <h1>Custom Style Ads</h1>
+          <p class="sub">
+            Branding, marketing graphics, and monthly social media marketing packages that help your business look established,
+            earn trust fast, and turn attention into paying customers.
+          </p>
+
+          <div class="offer">🎁 Limited Time Offer — First 10 clients get <b>1 extra design</b> in any package deal.</div>
+
+          <div class="heroActions">
+            <a class="btn btnPrimary" href="#packages">View Packages</a>
+            <a class="btn" href="mailto:CustomStyleAds@gmail.com?subject=New%20Inquiry%20%E2%80%94%20Custom%20Style%20Ads">Email Us</a>
+            <a class="btn btnGhost" href="#contact">Contact Form</a>
+          </div>
+
+          <p class="note">Email: <b>CustomStyleAds@gmail.com</b></p>
+        </div>
+
+        <aside class="panel">
+          <h3>What you get</h3>
+          <div class="miniGrid">
+            <div class="mini"><b>Premium Look</b><span>Design that feels established</span></div>
+            <div class="mini"><b>Better Offers</b><span>Graphics built to convert</span></div>
+            <div class="mini"><b>More Leads</b><span>Consistent, intentional content</span></div>
+            <div class="mini"><b>Simple Process</b><span>Fast delivery, clear revisions</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sectionHead reveal">
+        <h2>Services</h2>
+        <p>Clean creative + strategy designed for real business growth. Choose one service or combine for a full brand + marketing system.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="infoCard reveal">
+          <div class="badge">🎨 Brand Identity</div>
+          <h3>Logos & Brand Kits</h3>
+          <p>Professional identity design that makes your business instantly more credible.</p>
+        </div>
+
+        <div class="infoCard reveal">
+          <div class="badge">📢 Marketing Graphics</div>
+          <h3>Ads, Flyers & Posters</h3>
+          <p>High-impact visuals built for social, web, and print — clean and conversion-focused.</p>
+        </div>
+
+        <div class="infoCard reveal">
+          <div class="badge">📈 Social Media Marketing</div>
+          <h3>Monthly Growth Plans</h3>
+          <p>Consistent content + direction to keep you visible and bring customers in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="softBlock">
+    <div class="wrap">
+      <div class="sectionHead reveal">
+        <h2>Why social media marketing is a must</h2>
+        <p>Customers are researching and discovering brands every day. Consistency builds trust — trust drives sales.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="infoCard reveal">
+          <div class="badge">📌 Visibility</div>
+          <h3>Stay top-of-mind</h3>
+          <p>Consistent posting keeps your brand in front of the right customers.</p>
+        </div>
+        <div class="infoCard reveal">
+          <div class="badge">🧠 Trust</div>
+          <h3>Look established</h3>
+          <p>Professional creative makes your business feel legitimate instantly.</p>
+        </div>
+        <div class="infoCard reveal">
+          <div class="badge">💼 Conversion</div>
+          <h3>Turn views into clients</h3>
+          <p>Clear offers + strong creative drive messages, bookings, and sales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES (OPTION 2) -->
+  <section id="packages">
+    <div class="wrap">
+      <div class="sectionHead reveal">
+        <h2>Packages</h2>
+        <p>Clear options with deliverables spelled out. Bold pricing under the title (Option 2) for fast decision-making.</p>
+      </div>
+
+      <!-- Brand Identity -->
+      <div class="sectionHead" style="margin-top:10px;">
+        <h2 style="font-size:24px;margin:0;">Brand Identity</h2>
+      </div>
+      <div class="pricingGrid">
+        <div class="priceCard reveal">
+          <h3>Basic Logo</h3>
+          <div class="price">$30</div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>1 logo concept</span></li>
+            <li><span class="tick">✓</span><span>Up to 2 revisions</span></li>
+            <li><span class="tick">✓</span><span>High-resolution PNG &amp; JPG files</span></li>
+            <li><span class="tick">✓</span><span>Social-media-ready formats</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=Basic%20Logo%20Package%20%E2%80%94%20Inquiry">Start Package</a>
+          </div>
+        </div>
+
+        <div class="priceCard reveal">
+          <h3>Brand Kit</h3>
+          <div class="price">$75</div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>2–3 logo concepts</span></li>
+            <li><span class="tick">✓</span><span>Up to 3 revisions</span></li>
+            <li><span class="tick">✓</span><span>Color palette</span></li>
+            <li><span class="tick">✓</span><span>Font recommendations</span></li>
+            <li><span class="tick">✓</span><span>Social &amp; web-ready files</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=Brand%20Kit%20Package%20%E2%80%94%20Inquiry">Start Package</a>
+          </div>
+        </div>
+
+        <div class="priceCard featured reveal">
+          <div class="ribbon">Most Popular</div>
+          <h3>Premium Identity</h3>
+          <div class="price">$150</div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>3–5 logo concepts</span></li>
+            <li><span class="tick">✓</span><span>Full brand guide</span></li>
+            <li><span class="tick">✓</span><span>Social-media logo variations</span></li>
+            <li><span class="tick">✓</span><span>Business card design</span></li>
+            <li><span class="tick">✓</span><span>Unlimited minor tweaks</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=Premium%20Identity%20Package%20%E2%80%94%20Inquiry">Start Package</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing Graphics -->
+      <div class="sectionHead" style="margin-top:10px;">
+        <h2 style="font-size:24px;margin:0;">Marketing Graphics</h2>
+      </div>
+      <div class="pricingGrid">
+        <div class="priceCard reveal">
+          <h3>1 Design</h3>
+          <div class="price">$20</div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>1 custom ad, flyer, or poster</span></li>
+            <li><span class="tick">✓</span><span>Up to 2 complimentary revisions</span></li>
+            <li><span class="tick">✓</span><span>High-resolution JPG/PNG files</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=1%20Design%20Package%20%E2%80%94%20Inquiry">Order Now</a>
+          </div>
+        </div>
+
+        <div class="priceCard reveal">
+          <h3>3 Designs</h3>
+          <div class="price">$50</div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>3 custom ads, flyers, or posters</span></li>
+            <li><span class="tick">✓</span><span>Up to 4 complimentary revisions</span></li>
+            <li><span class="tick">✓</span><span>High-resolution JPG/PNG files</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=3%20Designs%20Package%20%E2%80%94%20Inquiry">Order Now</a>
+          </div>
+        </div>
+
+        <div class="priceCard featured reveal">
+          <div class="ribbon">Best Value</div>
+          <h3>5 Designs</h3>
+          <div class="price">$75</div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>5 custom ads, flyers, or posters</span></li>
+            <li><span class="tick">✓</span><span>Up to 6 complimentary revisions</span></li>
+            <li><span class="tick">✓</span><span>High-resolution JPG/PNG files</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=5%20Designs%20Package%20%E2%80%94%20Inquiry">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Marketing -->
+      <div class="sectionHead" style="margin-top:10px;">
+        <h2 style="font-size:24px;margin:0;">Social Media Marketing <span style="color:var(--muted);font-weight:800;font-size:14px;">(Monthly)</span></h2>
+      </div>
+      <div class="pricingGrid">
+        <div class="priceCard reveal">
+          <h3>Starter</h3>
+          <div class="price">$150 <small>/ month</small></div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>6 posts</span></li>
+            <li><span class="tick">✓</span><span>1 featured campaign design</span></li>
+            <li><span class="tick">✓</span><span>Caption strategy</span></li>
+            <li><span class="tick">✓</span><span>Optional posting</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=Starter%20Marketing%20Package%20%E2%80%94%20Inquiry">Get Started</a>
+          </div>
+        </div>
+
+        <div class="priceCard featured reveal">
+          <div class="ribbon">Most Popular</div>
+          <h3>Growth</h3>
+          <div class="price">$300 <small>/ month</small></div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>8–12 posts</span></li>
+            <li><span class="tick">✓</span><span>2–3 campaign designs</span></li>
+            <li><span class="tick">✓</span><span>Ad-boosting setup</span></li>
+            <li><span class="tick">✓</span><span>Analytics report</span></li>
+            <li><span class="tick">✓</span><span>Admin access (2 platforms + Google)</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=Growth%20Marketing%20Package%20%E2%80%94%20Inquiry">Choose Growth</a>
+          </div>
+        </div>
+
+        <div class="priceCard reveal">
+          <h3>Premium</h3>
+          <div class="price">$500 <small>/ month</small></div>
+          <ul class="features">
+            <li><span class="tick">✓</span><span>16–20 posts</span></li>
+            <li><span class="tick">✓</span><span>4–6 campaigns</span></li>
+            <li><span class="tick">✓</span><span>Full ad management</span></li>
+            <li><span class="tick">✓</span><span>Weekly optimization</span></li>
+            <li><span class="tick">✓</span><span>Admin access (up to 5 platforms + Google)</span></li>
+          </ul>
+          <div class="cardCTA">
+            <a class="btn btnPrimary" href="mailto:CustomStyleAds@gmail.com?subject=Premium%20Marketing%20Package%20%E2%80%94%20Inquiry">Go Premium</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="softBlock">
+    <div class="wrap">
+      <div class="sectionHead reveal">
+        <h2>Contact</h2>
+        <p>Send details and we’ll reply with next steps. Booking is available by email.</p>
+      </div>
+
+      <div class="contactGrid">
+        <div class="contactCard reveal">
+          <h3 style="margin:0 0 6px;">Message us</h3>
+          <p style="margin:0 0 12px;color:var(--muted);font-weight:650;">This form opens your email app with your message pre-filled.</p>
+
+          <form id="mailForm">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@company.com" required>
+
+            <label for="service">Service</label>
+            <input id="service" name="service" placeholder="Brand Identity / Marketing Graphics / Social Media Marketing">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what you need, timeline, and any links..." required></textarea>
+
+            <button class="btn btnPrimary" type="submit" style="width:100%;">Send Email</button>
+            <div class="note">Email: <b>CustomStyleAds@gmail.com</b></div>
+          </form>
+        </div>
+
+        <div class="contactCard reveal">
+          <h3 style="margin:0 0 6px;">Book a consultation</h3>
+          <p style="margin:0;color:var(--muted);font-weight:650;">Click below to book via email. (We can swap this to Calendly anytime.)</p>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
+            <a class="btn btnPrimary" style="flex:1;justify-content:center;display:inline-flex;" href="mailto:CustomStyleAds@gmail.com?subject=Booking%20Request%20%E2%80%94%20Custom%20Style%20Ads">Book Now</a>
+            <a class="btn btnGhost" style="flex:1;justify-content:center;display:inline-flex;" href="mailto:CustomStyleAds@gmail.com?subject=Quick%20Question%20%E2%80%94%20Custom%20Style%20Ads">Quick Question</a>
+          </div>
+
+          <div class="note" style="margin-top:14px;">
+            Tip: Include your business name, what package you want, and any inspiration links.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;">
+      <div><b style="color:var(--text);">Custom Style Ads</b><div style="font-size:12px;">Custom Designs That Grow Your Business</div></div>
+      <div style="font-size:12px;">
+        <a href="#services">Services</a> · <a href="#packages">Packages</a> · <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal animations
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
+      }, { threshold: 0.12 });
+      els.forEach(el => obs.observe(el));
+    })();
+
+    // Mailto builder (no backend needed)
+    (function(){
+      const form = document.getElementById('mailForm');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const service = document.getElementById('service').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const subject = encodeURIComponent(`New Inquiry — Custom Style Ads (${service || 'General'})`);
+        const body = encodeURIComponent(
+`Name: ${name}
+Email: ${email}
+Service: ${service || '—'}
+
+Message:
+${message}`
+        );
+
+        window.location.href = `mailto:CustomStyleAds@gmail.com?subject=${subject}&body=${body}`;
+      });
+    })();
+  </script>
+</body>
+</html>
